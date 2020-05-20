@@ -1,0 +1,13 @@
+class Solution {
+public:
+    string removeOuterParentheses(string S) {
+        std:: string s;
+        int count = 0;
+        for(char c:S)
+        {
+            if(c == '(' && count++ >0) s+=c;
+            if(c == ')' && count-- >1) s+=c;
+        }
+        return s;
+    }
+};
